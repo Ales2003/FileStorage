@@ -2,8 +2,11 @@
 package filestorage;
 
 public abstract class AbstractFile implements InterfaceFile {
+    
+    
     private String name;
-
+    protected String show;
+    
     public String getName() {
         return name;
     }
@@ -12,10 +15,6 @@ public abstract class AbstractFile implements InterfaceFile {
         this.name = name;
     }
 
-
-    
-            
-   
-    
+      
     
 }

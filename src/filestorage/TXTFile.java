@@ -1,7 +1,6 @@
-
 package filestorage;
 
-public class PDFFile extends AbstractFile {
+public class TXTFile extends AbstractFile {
 
     
     @Override
@@ -18,7 +17,7 @@ public class PDFFile extends AbstractFile {
     //???!!! Как сделать через GetName и когла name private???
     @Override
     public String showFileName() {
-        show = "PDF File has name " + super.getName()+" and show piktures";
+        show = "TXT File has name " + super.getName()+ " and show texts";
         System.out.println(show);
         return show;
     }
