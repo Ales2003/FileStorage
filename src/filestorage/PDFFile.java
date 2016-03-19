@@ -4,6 +4,13 @@ package filestorage;
 public class PDFFile extends AbstractFile {
 
     
+    public PDFFile() {
+        super.setName("Name: "+Main.fileID);//super заменяет необходимость создавать ссылку на объект, чтобы реализовать метод
+        System.out.println(super.getName());
+    }
+    
+
+    
     @Override
     public void setName(String name) {
         super.setName(name); //To change body of generated methods, choose Tools | Templates.
