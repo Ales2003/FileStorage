@@ -5,7 +5,8 @@ public class PDFFile extends AbstractFile {
 
     
     public PDFFile() {
-        super.setName("Name: "+Main.fileID);//super заменяет необходимость создавать ссылку на объект, чтобы реализовать метод
+        //???super заменяет необходимость создавать ссылку на объект, которая нужна чтобы реализовать метод (ведь к методу млжно обратиться только через объект(ссылку на объект))
+        super.setName("PDF_"+Main.fileID);
         System.out.println(super.getName());
     }
     
@@ -25,7 +26,7 @@ public class PDFFile extends AbstractFile {
     //???!!! Как сделать через GetName и когла name private???
     @Override
     public String showFileName() {
-        show = "PDF File has name " + super.getName()+" and show piktures";
+        show = "PDF File has name <<" + super.getName()+">> and show piktures";
         System.out.println(show);
         return show;
     }
