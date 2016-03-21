@@ -8,8 +8,8 @@ public class FileStorage {
     //Переменная, задающая размер массива
     public int massivLenght;
     
-    public AbstractFile pdfFiles;
-    public AbstractFile oldPdfFiles;
+    public PDFFile pdfFiles;
+    public PDFFile oldPdfFiles;
     
 
     public void addPDFFile(){
@@ -21,18 +21,19 @@ public class FileStorage {
         if (pdfFileIndex==0) {
             //создаем новый массив pdf-файлов с длиной (pdfFileIndex+1) и присваиваем его ссылке pdfFile
             //???как создавать массив типа Абстракт чтоюы помещать туда и ТХТ и АВИ???
-            AbstractFile [] pdfFiles = new PDFFile[pdfFileIndex+1];
+            PDFFile [] pdfFiles = new PDFFile[pdfFileIndex+1];
             //создаем элемент массива с индексом pdfFileIndex
             pdfFiles [pdfFileIndex] = new PDFFile();
             //печатаем все элементы массива
             for(int i=0; i<pdfFileIndex+1; i++) {
             // Печатаем элемент массива
             System.out.println(pdfFiles[i]);
+            
             }
             
         }
         else {
-            AbstractFile [] oldPdfFiles = new PDFFile[pdfFileIndex];
+            
             //oldPdfFiles = pdfFiles;??? почему так нельзя???копировать масссив через ссылку?
             
             /*
@@ -46,13 +47,20 @@ public class FileStorage {
             System.out.println(b[i]);
             
             №2
+            
             №3
             
             
             */
+            //???
+            //AbstractFile [] oldPdfFiles = (AbstractFile [])pdfFiles.clone();
             
-            
-            AbstractFile [] pdfFiles = new PDFFile[pdfFileIndex+1];
+            PDFFile [] oldPdfFiles = new PDFFile[pdfFileIndex];
+            for(int j=0; j<pdfFileIndex; j++) {
+                //копируем элементы массива pdfFiles в массив oldPdfFiles
+                oldPdfFiles [j] = pdfFiles [j];
+                }
+            PDFFile [] pdfFiles = new PDFFile[pdfFileIndex+1];
             //создаем элемент массива с индексом pdfFileIndex
             pdfFiles [pdfFileIndex] = new PDFFile();
             //печатаем все элементы массива
